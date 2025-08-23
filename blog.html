@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Index | Geo Jolly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="main-title">Shubham Kumar</h1>
+            <p class="greeting"><span id="dynamic-greeting">Hello everyone!</span></p>
+            
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <!-- <a href="#" class="nav-link">Site</a>
+                <a href="#" class="nav-link">V1</a> -->
+            </nav>
+            
+            <!-- <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <button class="search-clear">×</button>
+            </div> -->
+        </header>
+
+        <!-- Blog Header -->
+        <div class="blog-header">
+            <h2 class="blog-title">Blog Posts</h2>
+            <div class="blog-controls">
+                <select class="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="baduk">Baduk</option>
+                    <option value="gate">GATE</option>
+                    <option value="dev">Dev</option>
+                    <option value="ai">AI</option>
+                </select>
+                <div class="layout-toggle">
+                    <button class="layout-btn grid-btn active" data-layout="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="layout-btn list-btn" data-layout="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Blog Posts Grid -->
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog Post 1 -->
+                <div class="blog-card" data-category="baduk">
+                    <div class="card-header">
+                        <span class="date">June 23, 2025</span>
+                        <span class="category">Baduk</span>
+                    </div>
+                    <h3 class="card-title">Go Proverbs</h3>
+                    <p class="card-description">A while ago, I was watching Dwyrin's proverb series on YouTube, and to be honest, it was quite fun to watch. Since then, I have always wanted to d...</p>
+                    <div class="blog-card-footer">
+                        <button class="read-more-btn">Read More ></button>
+                        <span class="views">114 views</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="blog-card" data-category="gate">
+                    <div class="card-header">
+                        <span class="date">March 22, 2025</span>
+                        <span class="category">GATE</span>
+                    </div>
+                    <h3 class="card-title">My Gate Journey</h3>
+                    <p class="card-description">After completing my Bachelor's, I suddenly decided, without any clear reason, to prepare for GATE instead of going abroad. I had always dreamed of...</p>
+                    <div class="blog-card-footer">
+                        <button class="read-more-btn">Read More ></button>
+                        <span class="views">2304 views</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="blog-card" data-category="dev">
+                    <div class="card-header">
+                        <span class="date">March 22, 2025</span>
+                        <span class="category">Dev</span>
+                    </div>
+                    <h3 class="card-title">A New Recipe for Jekyll Comments</h3>
+                    <p class="card-description">I've always wanted to implement a custom comment box in my Jekyll blog without relying on third-party services like Disqus or the GitHub API. Since...</p>
+                    <div class="blog-card-footer">
+                        <button class="read-more-btn">Read More ></button>
+                        <span class="views">203 views</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="blog-card" data-category="ai">
+                    <div class="card-header">
+                        <span class="date">February 29, 2024</span>
+                        <span class="category">AI</span>
+                    </div>
+                    <h3 class="card-title">Replicating AlphaGo</h3>
+                    <p class="card-description">Go, also known as Baduk in Korea, has a long history spanning over 2500 years and is loved by many in East Asia. In this game, players take turns p...</p>
+                    <div class="blog-card-footer">
+                        <button class="read-more-btn">Read More ></button>
+                        <span class="views">1397 views</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 5 -->
+                <div class="blog-card" data-category="ai">
+                    <div class="card-header">
+                        <span class="date">September 30, 2023</span>
+                        <span class="category">AI</span>
+                    </div>
+                    <h3 class="card-title">Google Summer of Code'23 - ML4SCI</h3>
+                    <p class="card-description">I'm thrilled to share that I've been selected for Google Summer of Code (GSoC) at MI4SCI. I'll be working on developing equivariant neural networks...</p>
+                    <div class="blog-card-footer">
+                        <button class="read-more-btn">Read More ></button>
+                        <span class="views">4963 views</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 6 -->
+                <div class="blog-card" data-category="ai">
+                    <div class="card-header">
+                        <span class="date">March 10, 2024</span>
+                        <span class="category">AI</span>
+                    </div>
+                    <h3 class="card-title">Replicating AlphaGo - Part 2</h3>
+                    <p class="card-description">Continuing from my previous post, this article delves deeper into the implementation details and challenges faced while replicating AlphaGo...</p>
+                    <div class="blog-card-footer">
+                        <button class="read-more-btn">Read More ></button>
+                        <span class="views">892 views</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 7 -->
+                <div class="blog-card" data-category="dev">
+                    <div class="card-header">
+                        <span class="date">January 15, 2024</span>
+                        <span class="category">Dev</span>
+                    </div>
+                    <h3 class="card-title">Building a Custom CMS</h3>
+                    <p class="card-description">Exploring the process of creating a custom content management system from scratch, including database design and user interface considerations...</p>
+                    <div class="blog-card-footer">
+                        <button class="read-more-btn">Read More ></button>
+                        <span class="views">567 views</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 8 -->
+                <div class="blog-card" data-category="baduk">
+                    <div class="card-header">
+                        <span class="date">December 5, 2023</span>
+                        <span class="category">Baduk</span>
+                    </div>
+                    <h3 class="card-title">Advanced Go Strategies</h3>
+                    <p class="card-description">A comprehensive guide to advanced Go strategies, including tesuji, life and death problems, and endgame techniques for intermediate players...</p>
+                    <div class="blog-card-footer">
+                        <button class="read-more-btn">Read More ></button>
+                        <span class="views">734 views</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more-btn" id="loadMoreBtn">Load More Posts</button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Shubham Kumar</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+const greetings = [
+    "Hello everyone!",           // English
+    "सभी को नमस्कार!",           // Hindi
+    "எல்லோருக்கும் வணக்கம்!",    // Tamil
+    "ಎಲ್ಲರಿಗೂ ನಮಸ್ಕಾರ!",        // Kannada
+    "सर्वांना नमस्कार!"          // Marathi
+];
+let idx = 0;
+setInterval(() => {
+    const el = document.getElementById('dynamic-greeting');
+    if (el) {
+        el.textContent = greetings[idx];
+        idx = (idx + 1) % greetings.length;
+    }
+}, 1000);
+</script>
+</body>
+</html>

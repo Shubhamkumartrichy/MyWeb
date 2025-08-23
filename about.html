@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Geo Jolly</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="main-title">Shubham Kumar</h1>
+            <p class="greeting"><span id="dynamic-greeting">Hello everyone!</span></p>
+            
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <!-- <a href="#" class="nav-link">Site</a>
+                <a href="#" class="nav-link">V1</a> -->
+            </nav>
+            
+            <!-- <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <button class="search-clear">×</button>
+            </div> -->
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Row - About Me and Wishlist -->
+            <div class="content-row">
+                <div class="content-card about-me-card">
+                    <h3 class="card-title">About Me</h3>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>I'm a first-year M.Tech student in Computer Science at <strong>IIT Bombay</strong>, with interests in <strong>Reinforcement Learning</strong> and <strong>Aerial Autonomy</strong>.</p>
+                            <p>My hobbies include travel, swimming, cultural exploration, classical piano music, watching anime, Korean and Chinese dramas, playing games (Genshin Impact, Fortnite, League of Legends, Terraria), and playing Go (Weiqi/Baduk).</p>
+                            <p>I'm fond of "The 1975" band and movies of "Steven Chow".</p>
+                        </div>
+                        <div class="profile-image">
+                            <div class="profile-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span>Profile Photo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h3 class="card-title">Wishlist</h3>
+                    <p class="wishlist-subtitle">13% completed</p>
+                    <div class="wishlist-items">
+                        <div class="wishlist-item">
+                            <span class="wishlist-icon incomplete">✗</span>
+                            <span class="wishlist-text">Learn to play these piano pieces</span>
+                        </div>
+                        <div class="wishlist-subitems">
+                            <div class="wishlist-item">
+                                <span class="wishlist-icon complete">✔</span>
+                                <span class="wishlist-text">River Flows in you (Yiruma)</span>
+                            </div>
+                            <div class="wishlist-item">
+                                <span class="wishlist-icon incomplete">✗</span>
+                                <span class="wishlist-text">Kiss the rain (Yiruma)</span>
+                            </div>
+                            <div class="wishlist-item">
+                                <span class="wishlist-icon incomplete">✗</span>
+                                <span class="wishlist-text">Fur Elise (Beethoven)</span>
+                            </div>
+                            <div class="wishlist-item">
+                                <span class="wishlist-icon incomplete">✗</span>
+                                <span class="wishlist-text">Forest au lait (zmi)</span>
+                            </div>
+                        </div>
+                        <div class="wishlist-item">
+                            <span class="wishlist-icon complete">✔</span>
+                            <span class="wishlist-text">Learn to drive a car</span>
+                        </div>
+                        <div class="wishlist-item">
+                            <span class="wishlist-icon incomplete">✗</span>
+                            <span class="wishlist-text">Visit these countries</span>
+                        </div>
+                        <div class="wishlist-subitems">
+                            <div class="wishlist-item">
+                                <span class="wishlist-icon incomplete">✗</span>
+                                <span class="wishlist-text">Norway</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Row - Timeline and Places -->
+            <div class="content-row">
+                <div class="content-card">
+                    <h3 class="card-title">Timeline</h3>
+                    <p class="timeline-subtitle">2020 - 2025</p>
+                    <div class="timeline-items">
+                        <div class="timeline-item">
+                            <h4 class="timeline-title">Intern @IIT Bombay</h4>
+                            <p class="timeline-description">Working as a research intern at IIT Bombay under Professor Ganesh Ramakrishnan on the Maharashtra Drone Project.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="timeline-title">Joined IIT Bombay M.Tech</h4>
+                            <p class="timeline-description">Joined the M.Tech program in Computer Science and Engineering at IIT Bombay. Received offers from all top 5 IITs through direct admission and interview.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="timeline-title">MLPerf Challenge 2025</h4>
+                            <p class="timeline-description">Secured 1st place in the MLPerf Challenge 2025, conducted by GateOverflow, and won a cash prize of ₹50,000.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h3 class="card-title">Places I've Been</h3>
+                    <div class="world-map-container">
+                        <div class="world-map">
+                            <div class="map-pin" style="top: 20%; left: 20%;" title="United States"></div>
+                            <div class="map-pin" style="top: 25%; left: 45%;" title="United Kingdom"></div>
+                            <div class="map-pin" style="top: 30%; left: 48%;" title="France"></div>
+                            <div class="map-pin" style="top: 28%; left: 52%;" title="Germany"></div>
+                            <div class="map-pin" style="top: 35%; left: 65%;" title="UAE"></div>
+                            <div class="map-pin" style="top: 45%; left: 70%;" title="India"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row - Music -->
+            <div class="content-row">
+                <div class="content-card music-card">
+                    <h3 class="card-title">Music</h3>
+                    <div class="music-player">
+                        <button class="music-nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                        <div class="album-art">
+                            <div class="album-cover">
+                                <div class="butterfly-image"></div>
+                            </div>
+                            <div class="album-info">
+                                <h4 class="album-title">Butterfly Waltz</h4>
+                                <p class="album-artist">BRIAN CRAIN</p>
+                                <p class="album-featured">DANIELE LEONI</p>
+                            </div>
+                        </div>
+                        <button class="music-nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="music-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Shubham Kumar</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+const greetings = [
+    "Hello everyone!",           // English
+    "सभी को नमस्कार!",           // Hindi
+    "எல்லோருக்கும் வணக்கம்!",    // Tamil
+    "ಎಲ್ಲರಿಗೂ ನಮಸ್ಕಾರ!",        // Kannada
+    "सर्वांना नमस्कार!"          // Marathi
+];
+let idx = 0;
+setInterval(() => {
+    const el = document.getElementById('dynamic-greeting');
+    if (el) {
+        el.textContent = greetings[idx];
+        idx = (idx + 1) % greetings.length;
+    }
+}, 1000);
+</script>
+</body>
+</html>
