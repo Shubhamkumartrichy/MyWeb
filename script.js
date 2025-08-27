@@ -7,42 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeHoverEffects();
 });
 
-// Search Functionality
-function initializeSearch() {
-    const searchInput = document.querySelector('.search-input');
-    const searchClear = document.querySelector('.search-clear');
-    
-    if (searchInput && searchClear) {
-        // Clear search functionality
-        searchClear.addEventListener('click', function() {
-            searchInput.value = '';
-            searchInput.focus();
-            // Reset all cards to visible
-            showAllCards();
-        });
-        
-        // Search functionality
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase().trim();
-            if (searchTerm === '') {
-                showAllCards();
-            } else {
-                filterCards(searchTerm);
-            }
-        });
-        
-        // Enter key to search
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                const searchTerm = this.value.toLowerCase().trim();
-                if (searchTerm !== '') {
-                    filterCards(searchTerm);
-                }
-            }
-        });
-    }
-}
 
 // Filter cards based on search term
 function filterCards(searchTerm) {
@@ -109,32 +73,6 @@ function initializeNavigation() {
             }
         });
     });
-}
-
-// Button Functionality
-function initializeButtons() {
-    // Read More buttons
-    const readMoreBtns = document.querySelectorAll('.read-more-btn');
-    readMoreBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const card = this.closest('.content-card');
-            const title = card.querySelector('.card-title')?.textContent || 'Blog Post';
-            console.log(`Read More clicked for: ${title}`);
-            
-            // You can add actual navigation to blog posts here
-            // For now, just show an alert
-            alert(`Opening: ${title}`);
-        });
-    });
-    
-    // Visit Archive button
-    const visitArchiveBtn = document.querySelector('.visit-archive-btn');
-    if (visitArchiveBtn) {
-        visitArchiveBtn.addEventListener('click', function() {
-            console.log('Visit Archive clicked');
-            alert('Opening File Archive...');
-        });
-    }
 }
 
 // Hover Effects
