@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Shubham</title>
-    <link rel="icon" type="image/png" href="Favicon.png">
+    <link rel="icon" type="image/png" href="Media/Favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -26,25 +26,23 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Top Row - About Me and Wishlist -->
-            <div class="content-row">
+            <!-- Top Row - About Me and Profile Image -->
+            <div class="content-row about-top-row">
                 <div class="content-card about-me-card">
                     <h3 class="card-title">About Me</h3>
-                    <div class="about-content">
-                        <div class="about-text">
-                            <p>I'm a first-year M.Tech student in Computer Science at <strong>IIT Bombay</strong>, with interests in <strong>Reinforcement Learning</strong> and <strong>Aerial Autonomy</strong>.</p>
-                            <p>My hobbies include travel, swimming, cultural exploration, classical piano music, watching anime, Korean and Chinese dramas, playing games (Genshin Impact, Fortnite, League of Legends, Terraria), and playing Go (Weiqi/Baduk).</p>
-                            <p>I'm fond of "The 1975" band and movies of "Steven Chow".</p>
-                        </div>
-                        <div class="profile-image">
-                            <div class="profile-placeholder">
-                                <i class="fas fa-user"></i>
-                                <span>Profile Photo</span>
-                            </div>
-                        </div>
+                    <div class="about-text">
+                        <p>I'm a first-year M.Tech student in Computer Science at <strong>IIT Bombay</strong>, with interests in <strong>Reinforcement Learning</strong> and <strong>Aerial Autonomy</strong>.</p>
+                        <p>My hobbies include travel, swimming, cultural exploration, classical piano music, watching anime, Korean and Chinese dramas, playing games (Genshin Impact, Fortnite, League of Legends, Terraria), and playing Go (Weiqi/Baduk).</p>
+                        <p>I'm fond of "The 1975" band and movies of "Steven Chow".</p>
                     </div>
                 </div>
+                <div class="content-card profile-image-card">
+                    <img src="Media/profile.jpg" alt="Profile Photo" class="profile-photo" />
+                </div>
+            </div>
 
+            <!-- Second Row - Wishlist and Timeline -->
+            <div class="content-row about-second-row">
                 <div class="content-card">
                     <h3 class="card-title">Wishlist</h3>
                     <p class="wishlist-subtitle">13% completed</p>
@@ -87,10 +85,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Middle Row - Timeline and Places -->
-            <div class="content-row">
                 <div class="content-card">
                     <h3 class="card-title">Timeline</h3>
                     <p class="timeline-subtitle">2020 - 2025</p>
@@ -109,24 +103,14 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="content-card">
-                    <h3 class="card-title">Places I've Been</h3>
-                    <div class="world-map-container">
-                        <div class="world-map">
-                            <div class="map-pin" style="top: 20%; left: 20%;" title="United States"></div>
-                            <div class="map-pin" style="top: 25%; left: 45%;" title="United Kingdom"></div>
-                            <div class="map-pin" style="top: 30%; left: 48%;" title="France"></div>
-                            <div class="map-pin" style="top: 28%; left: 52%;" title="Germany"></div>
-                            <div class="map-pin" style="top: 35%; left: 65%;" title="UAE"></div>
-                            <div class="map-pin" style="top: 45%; left: 70%;" title="India"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <!-- Bottom Row - Music -->
-            <div class="content-row">
+            <!-- Third Row - Map and Music -->
+            <div class="content-row about-third-row">
+                <div class="content-card">
+                    <h3 class="card-title">Places I've Been</h3>
+                    <!-- Your map here -->
+                </div>
                 <div class="content-card music-card">
                     <h3 class="card-title">Music</h3>
                     <div class="music-player">
