@@ -469,3 +469,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// Mobile Popup Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Only show popup if on mobile and not previously dismissed
+    if (window.innerWidth <= 900 && !localStorage.getItem('mobilePopupDismissed')) {
+        document.getElementById('mobile-popup').style.display = 'flex';
+    }
+    document.getElementById('mobile-popup-btn').onclick = function() {
+        document.getElementById('mobile-popup').style.display = 'none';
+        localStorage.setItem('mobilePopupDismissed', '1');
+    };
+});

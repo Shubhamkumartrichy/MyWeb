@@ -12,7 +12,7 @@ body {
         url("Media/Physics.jpg"),  /* your math background */
         linear-gradient(rgba(240, 240, 240, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(240, 240, 240, 0.1) 1px, transparent 1px);
-    background-size: auto, auto, 20px 20px, 20px 20px;  /* overlay + image + grid */
+    background-size: auto, auto, 20px 20px;  /* overlay + image + grid */
     background-repeat: repeat, repeat, repeat, repeat;
     background-attachment: scroll, scroll, scroll, scroll;  /* background moves with scroll */
     background-position: 0 0, 0 0, 0 0, 0 0;
@@ -507,6 +507,7 @@ body {
     line-height: 1.6;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -703,6 +704,32 @@ body {
     grid-template-columns: 2fr 1fr;
     gap: 30px;
     margin-bottom: 40px;
+}
+
+/* Equal height for all about page cards */
+.about-top-row .content-card,
+.about-second-row .content-card,
+.about-third-row .content-card {
+    height: 320px;           /* Match the reference box height */
+    max-height: 320px;
+    overflow-y: auto;        /* Add vertical scrollbar if content exceeds */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Optional: Hide scrollbar for non-overflowing boxes (Webkit browsers) */
+.about-top-row .content-card::-webkit-scrollbar,
+.about-second-row .content-card::-webkit-scrollbar,
+.about-third-row .content-card::-webkit-scrollbar {
+    width: 8px;
+    background: #f0f0f0;
+}
+.about-top-row .content-card::-webkit-scrollbar-thumb,
+.about-second-row .content-card::-webkit-scrollbar-thumb,
+.about-third-row .content-card::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
 }
 
 /* Responsive: stack columns on small screens */
@@ -907,5 +934,70 @@ body {
     .blog-grid.list-layout .card-header {
         flex-direction: row;
         justify-content: center;
+    }
+}
+
+/* Wishlist Icon Styles */
+.wishlist-icon.complete {
+    color: #2ecc40; /* green */
+    font-weight: bold;
+}
+.wishlist-icon.incomplete {
+    color: #e74c3c; /* red */
+    font-weight: bold;
+}
+.wishlist-subitems {
+    margin-left: 28px;
+}
+
+/* Mobile-only popup styles */
+.mobile-popup-overlay {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+.mobile-popup-box {
+    background: #fff;
+    border: 2px dotted #222;
+    border-radius: 14px;
+    max-width: 90vw;
+    width: 340px;
+    padding: 32px 20px 24px 20px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    text-align: center;
+}
+.mobile-popup-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 12px;
+}
+.mobile-popup-msg {
+    color: #444;
+    font-size: 1.05rem;
+    margin-bottom: 22px;
+}
+.mobile-popup-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 28px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.mobile-popup-btn:hover {
+    background: #222;
+}
+@media (max-width: 900px) {
+    .mobile-popup-overlay {
+        display: flex;
     }
 }
