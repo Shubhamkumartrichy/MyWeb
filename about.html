@@ -207,8 +207,10 @@
             <!-- Third Row - Map and Music -->
             <div class="content-row about-third-row">
                 <div class="content-card">
-                    <h3 class="card-title">Places I've Been</h3>
-                    <img src="Media/map-bird.png" alt="Places I've Been Map" style="width:100%;max-width:600px;height:auto;display:block;margin:18px auto 0 auto;border-radius:8px;">
+                    <h3 class="card-title">
+    Places I've Been <span style="font-size:1em; color:#888; font-weight:400;">(Zoomable Map)</span>
+</h3>
+                    <div id="map" style="width:100%;height:250px;border-radius:12px;margin-top:18px;"></div>
                 </div>
                 <div class="content-card music-card">
                     <h3 class="card-title">Music</h3>
@@ -260,8 +262,7 @@ const greetings = [
     "Ciao a tutti!",                // Italian
     "সবাইকে শুভেচ্ছা!",             // Bengali
     "എല്ലാവർക്കും നമസ്കാരം!",         // Malayalam
-    "అందరికి నమస్కారం!",             // Telugu
-    "ਸਾਰੇਆਂ ਨੂੰ ਨਮਸਕਾਰ!"           // Punjabi
+    "అందరికి నమస్కారం!"             // Telugu
 ];
 
 let idx = 0;
@@ -272,6 +273,84 @@ setInterval(() => {
         idx = (idx + 1) % greetings.length;
     }
 }, 1000);
+</script>
+<!-- Add Plotly.js CDN if not already present -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // >100 days
+    var longStay = {
+      type: 'scattergeo',
+      mode: 'markers',
+      name: 'Spent >250 days',
+      text: [
+        "Nalanda (2005-2008)",
+        "Kolkata (2008-2010)",
+        "Trichy (2010-2020)",
+        "New Delhi (2020-2022)",
+        "Jais (2022-2025)",
+        "Bengaluru (2025-2026)"
+      ],
+      lon: [
+        85.52, 88.36, 78.69, 77.21, 81.69, 77.59
+      ],
+      lat: [
+        25.13, 22.57, 10.81, 28.61, 26.25, 12.97
+      ],
+      marker: { size: 12, color: 'teal', symbol: 'circle' },
+      hovertemplate: "%{text}<extra></extra>"
+    };
+
+    // <100 days
+    var shortStay = {
+      type: 'scattergeo',
+      mode: 'markers',
+      name: 'Spent <250 days',
+      text: [
+        "Dehradun (2022)",
+        "Wayanad (2024)",
+        "Munnar (2024)"
+      ],
+      lon: [
+        78.0322,   // Dehradun
+        76.1320,   // Wayanad
+        77.0595    // Munnar
+      ],
+      lat: [
+        30.3165,   // Dehradun
+        11.6854,   // Wayanad
+        10.0889    // Munnar
+      ],
+      marker: { size: 10, color: 'orange', symbol: 'circle' },
+      hovertemplate: "%{text}<extra></extra>"
+    };
+
+    var layout = {
+      geo: {
+        scope: 'world',
+        projection: { type: 'natural earth' },
+        showland: true,
+        landcolor: "#f7f7f7",
+        showcountries: true,
+        countrycolor: "#222",
+        countrywidth: 0.5,
+        showframe: false,
+        showcoastlines: false,
+        bgcolor: 'rgba(0,0,0,0)'
+      },
+      legend: {
+        x: 0.05,
+        y: 0.95,
+        bgcolor: "#fff",
+        bordercolor: "#ccc",
+        borderwidth: 1,
+        font: {size: 12}
+      },
+      margin: {t: 0, r: 0, l: 0, b: 0}
+    };
+
+    Plotly.newPlot("map", [longStay, shortStay], layout, {displayModeBar: false, responsive: true});
+});
 </script>
 </body>
 </html>
