@@ -46,11 +46,11 @@
 
                 <div class="content-card">
                     <h3 class="card-title">将进酒 by Li Bai</h3>
-                    <div class="poem-content">
-                        <div class="poem-image">
-                            <div class="abstract-image"></div>
+                    <div class="poem-content" style="display:flex;align-items:center;">
+                        <div class="poem-image" style="flex:1;">
+                            <img src="Media/Tree.webp" alt="Tree" style="width:100%;height:100%;object-fit:cover;display:block;">
                         </div>
-                        <div class="poem-text">
+                        <div class="poem-text" style="flex:2; padding-left:18px;">
                             <p>君不见黄河之水天上来，奔流到海不复回。</p>
                             <p>君不见高堂明镜悲白发，朝如青丝暮成雪。</p>
                             <p>人生得意须尽欢，莫使金樽空对月。</p>
@@ -80,9 +80,11 @@
                     <div class="card-content-with-image">
                         <div class="text-content">
                             <h3 class="card-title">Replicating AlphaGo</h3>
-                            <p class="card-description">This blog discusses my attempts to replicate AlphaGo for a 9x9 Go board, detailing the challenges and insights. Codes for the project can be found on my <a href="#" class="github-link">GitHub</a>.</p>
+                            <p class="card-description">This blog discusses my attempts to replicate AlphaGo for a 9x9 Go board, detailing the challenges and insights.</a></p>
                         </div>
-                        <div class="go-board-image"></div>
+                        <div class="go-board-image">
+                            <img src="Media/Game.png" alt="Go Board" class="go-board-img">
+                        </div>
                     </div>
                     <button class="read-more-btn" onclick="window.location.href='under-construction.html'">Read More ></button>
                 </div>
@@ -102,23 +104,24 @@
             <!-- Latest News Section -->
             <div class="content-row">
                 <div class="content-card">
-                    <h3 class="card-title">Latest News</h3>
+                    <h3 class="card-title" style="margin-bottom:0;">Latest News</h3>
+                    <hr class="news-divider">
                     <div class="news-list">
                         <div class="news-item">
-                            <span class="news-date">July 23, 2025</span>
-                            <span class="news-text">MTech, IIT Bombay</span>
+                            <span class="news-text" style="font-weight:600;">Intern at SpringAlg</span>
+                            <span class="news-date" style="display:block; color:#888; font-size:0.98em; margin-top:2px;">May 20, 2025</span>
                         </div>
                         <div class="news-item">
-                            <span class="news-date">March 19, 2025</span>
-                            <span class="news-text">GATE CS AIR 189</span>
+                            <span class="news-text" style="font-weight:600;">Joined Gyanarpan</span>
+                            <span class="news-date" style="display:block; color:#888; font-size:0.98em; margin-top:2px;">January 19, 2024</span>
                         </div>
                         <div class="news-item">
-                            <span class="news-date">June 26, 2023</span>
-                            <span class="news-text">Research Intern, University of California, Santa Cruz</span>
+                            <span class="news-text" style="font-weight:600;">Winner of CodeRiddle (Team TLE) @URJOTSAV’23</span>
+                            <span class="news-date" style="display:block; color:#888; font-size:0.98em; margin-top:2px;">November 5, 2023</span>
                         </div>
                         <div class="news-item">
-                            <span class="news-date">May 5, 2023</span>
-                            <span class="news-text">GSoC @ ML4SCI</span>
+                            <span class="news-text" style="font-weight:600;">Reliance Foundation Undergraduate Scholar</span>
+                            <span class="news-date" style="display:block; color:#888; font-size:0.98em; margin-top:2px;">March 5, 2023</span>
                         </div>
                     </div>
                 </div>
@@ -156,7 +159,7 @@
 
                 <div class="content-card">
                     <div class="card-header">
-                        <span class="date">Jan 20, 2023</span>
+                        <span class="date">Jan 20, 2024</span>
                         <span class="archived-tag">Archived</span>
                     </div>
                     <h3 class="card-title">GANetic</h3>
